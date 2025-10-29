@@ -44,10 +44,10 @@ mysql = MySQL(app)
 load_dotenv()
 
 # Set your OpenAI API key from environment variable
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # OpenAI API Key
-# openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 @app.route('/')
 @app.route('/login', methods = ['GET', 'POST'])
 
@@ -1025,3 +1025,4 @@ def report():
 
 if __name__ == "__main__":
     app.run()
+
