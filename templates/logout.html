@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>DCx | Logout </title><!--begin::Primary Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="DCx | Logout">
+    <link href='https://fonts.googleapis.com/css?family=Khmer' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='logout.css') }}">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-container">
+            <form>
+                <h3 style="font-family: Times New Roman; margin-bottom: 5px; font-size:24px;font-weight: bold;">Log out of your account?</h3>
+                <div class="button">
+                    <button type="button" class="can-btn" onclick="window.location.href='{{ url_for('dashboard') }}'">Cancel</button>
+                                <button type="button" class="log-btn" onclick="window.location.href='{{ url_for('login') }}'">Logout</button>
+                </div>
+            </form>
+        </div>
+        
+
+    </div>
+
+</body>
+</html>
