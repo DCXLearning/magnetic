@@ -1,0 +1,230 @@
+body {
+  background-color: #92c9f6dc;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container .form-container {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  opacity: 0.9;
+  margin-top: -100px;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+}
+
+.container .form-container .title text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container .form-container .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: -1px;
+}
+
+.container .form-container .title text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.container .form-container label {
+  width: 200px;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+.container .form-container input[type="text"],
+.container .form-container select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  border: 1px solid rgb(232, 228, 222);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.container .form-container input[type="password"],
+.container .form-container select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  border: 1px solid rgb(232, 228, 222);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.container .form-container .login {
+  margin-right: -40px;
+  text-align: right;
+}
+
+.container .form-container .login a {
+  text-decoration: none;
+}
+
+.container .form-container .login a input[type="submit"] {
+  width: 15%;
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 70px;
+}
+
+.container .form-container .login a input[type="submit"]:hover {
+  background-color: cadetblue;
+}
+
+.container .form-container .Register {
+  text-align: center;
+}
+
+
+/* Media query for small devices (phones, <600px width) */
+@media (max-width: 600px) {
+  .container .form-container {
+   
+    width: 90%;
+    height: auto;
+    padding: 35px;
+  }
+
+  .container .form-container label {
+    margin-left: 40px;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+  } 
+
+  .container .form-container .title text {
+    font-size: 24px;
+  }
+
+  .container .form-container input[type="text"],
+  .container .form-container input[type="password"],
+  .container .form-container select {
+    margin-left: 40px;
+    width: 80%;
+    padding: 10px;
+  }
+
+  .container .form-container .login a input[type="submit"] {
+    width: 25%;
+    padding: 10px;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 601px) {
+  .container .form-container {
+   
+    width: 80%;
+    height: auto;
+    padding: 35px;
+  }
+
+  .container .form-container label {
+    margin-left: 40px;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+  } 
+
+  .container .form-container .title text {
+    font-size: 24px;
+  }
+
+  .container .form-container input[type="text"],
+  .container .form-container input[type="password"],
+  .container .form-container select {
+    margin-left: 40px;
+    width: 80%;
+    padding: 10px;
+  }
+
+  .container .form-container .login a input[type="submit"] {
+    width: 25%;
+    padding: 10px;
+    margin-right: 93px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .container .form-container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .container .form-container .title text {
+    font-size: 20px;
+  }
+
+  .container .form-container input[type="text"],
+  .container .form-container input[type="password"],
+  .container .form-container select {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .container .form-container .login a input[type="submit"] {
+    width: 70%;
+    padding: 10px;
+  }
+
+  .container .form-container label {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+/* Media query for very small devices (screens < 320px) */
+@media (max-width: 320px) {
+  .container .form-container {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .container .form-container .title text {
+    font-size: 18px;
+  }
+
+  .container .form-container input[type="text"],
+  .container .form-container input[type="password"],
+  .container .form-container select {
+    width: 100%;
+    padding: 6px;
+  }
+
+  .container .form-container .login a input[type="submit"] {
+    width: 80%;
+    padding: 8px;
+  }
+
+  .container .form-container label {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+  }
+}
