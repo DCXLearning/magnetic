@@ -374,7 +374,78 @@ def generate_report_with_chatgpt(data, user_prompt):
         # Process only the last chunk
         last_chunk = chunks[-1]
         prompt = f""" 
-        You are a data analyst. Analyze the following dataset and provide insights based on the task provided:
+        You are a professional data analyst and Monitoring & Evaluation (M&E) specialist working for a development project in Cambodia.
+        You have received a dataset named “TVET.xlsx” exported from KoboToolbox.
+        The dataset includes activity-level data such as:
+        
+        - Activity codes, names, and types  
+        - Project names and support sources  
+        - Start and end dates, with duration in days  
+        - Locations (province, district, commune, village)  
+        - Implementers and assistants  
+        - Participants (20+ types with total, female, disability counts)
+        - Expected and achieved results (Result 1–5)
+        - Attached photos, quotes, and observations
+        - Budget and expenditure details (up to 50 budget lines per activity)
+        
+        Your task is to **analyze and summarize** this dataset and generate a **comprehensive analytical report**.
+        
+        ### Your report should include these sections:
+        
+        1. **Executive Summary**
+           - Key statistics (total activities, provinces covered, total participants, % female, % with disabilities)
+           - High-level findings and insights (participation trends, project coverage, etc.)
+        
+        2. **Data Overview**
+           - Describe the dataset structure, number of rows and columns, and key variables.
+           - Identify missing or inconsistent data and recommend data-cleaning steps.
+        
+        3. **Geographical Analysis**
+           - Activities by province/district.
+           - Participants by location.
+           - Provinces with highest activity frequency and participation.
+        
+        4. **Participation Analysis**
+           - Breakdown by participant types (total, female, disabilities, women-headed households).
+           - Compute gender balance (% female).
+           - Identify which activity types engage the most participants.
+        
+        5. **Project and Supporter Analysis**
+           - Number of activities by project and by donor/supporter.
+           - Highlight projects with the largest coverage or funding.
+           - Cross-tab of Project × Province.
+        
+        6. **Activity Duration and Frequency**
+           - Average activity duration.
+           - Timeline of activities by month or quarter.
+           - Seasonal trends or implementation gaps.
+        
+        7. **Results and Outcomes**
+           - % of activities that achieved Expected Results 1–5.
+           - Common success themes or qualitative insights from the “achievement” text fields.
+           - Quotes from participants showing impact or confusion.
+        
+        8. **Financial Summary**
+           - Total budget vs. total expenditure.
+           - Activities with >20% budget deviation.
+           - Cost per participant or per activity (if data allows).
+        
+        9. **Key Insights and Recommendations**
+           - Highlight data-driven conclusions.
+           - Suggest practical next steps for improving activity design, participation, or reporting.
+           - Note any anomalies, data entry issues, or missing data.
+        
+        10. **Visual Summary Suggestions**
+           - Suggest visualizations (bar, pie, map, trendline) that would best communicate each insight.
+           - Example: “Activities by province — horizontal bar chart”, “Participants by gender — pie chart”.
+        
+        Use clear, structured paragraphs with bullet points for key findings.
+        If numerical data is available, compute and include summary metrics.
+        If the dataset contains mixed Khmer-English labels, interpret them appropriately.
+        
+        End your report with a concise **Data Quality Note** describing the reliability of the data.
+        
+        The goal: Produce a professional, analytical report that can be presented to donors or project management for decision-making.
 
         Dataset:
         {last_chunk}
@@ -1025,4 +1096,5 @@ def report():
 
 if __name__ == "__main__":
     app.run()
+
 
