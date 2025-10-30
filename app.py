@@ -376,7 +376,7 @@ def generate_report_with_chatgpt(data, user_prompt):
         prompt = f""" 
         You are a data analyst and M&E specialist for the Cambodia TVET project.
 
-        Generate a concise analytical report (maximum 500–600 words) based on the data summary provided below. 
+        Generate a concise analytical report  narrative description one paraph each (maximum 500–600 words) based on the data summary provided below. 
         The dataset contains TVET activity reports including:
         - Activity code, name, project name, start/end date, duration
         - Province, district, commune, village
@@ -386,15 +386,15 @@ def generate_report_with_chatgpt(data, user_prompt):
         
         Your report must include these sections:
         
-        1. **Executive Summary** – total activities, total participants, % female, % disabled, and overall insights.
-        2. **Geographical Overview** – top provinces/districts by activities and participant volume.
-        3. **Participation Insights** – major participant groups, gender balance, and inclusion rates.
-        4. **Project & Donor Summary** – top projects or supporters and where they are active.
-        5. **Financial Overview** – total budget, total spending, and any activities with >20% deviation.
-        6. **Key Recommendations** – 3 short, actionable recommendations based on the data.
+        1. Executive Summary – one apograph total activities, total participants, % female, % disabled, and overall insights.
+        2. Geographical Overview – top provinces/districts by activities and participant volume.
+        3. Participation Insights – major participant groups, gender balance, and inclusion rates.
+        4. Project & Donor Summary – one apograph supporters and where they are active.
+        5. Financial Overview – total budget, total spending, and any activities with >20% deviation.
+        6. Key Recommendations – 3 short, actionable recommendations based on the data.
         
         Guidelines:
-        - Use bullet points for clarity.
+        -one apograph t points for clarity.
         - Focus on numbers and insights, not raw data.
         - If a value is missing, write “not available.”
         - Keep the language professional and concise.
@@ -402,7 +402,6 @@ def generate_report_with_chatgpt(data, user_prompt):
         
         DATA SUMMARY:
         {{ Paste your compact summary or first 30–50 rows here }}
-
 
         Dataset:
         {last_chunk}
@@ -1053,6 +1052,7 @@ def report():
 
 if __name__ == "__main__":
     app.run()
+
 
 
 
